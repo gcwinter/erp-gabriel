@@ -1,7 +1,7 @@
 package br.com.gabriel.model;
 
 public class Product {
-
+    private int id;
     private final String serialNumber;
     private final String model;
     private final String price;
@@ -14,6 +14,14 @@ public class Product {
         this.price = price;
         this.importationDate = importationDate;
         this.quantity = quantity;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getSerialNumber() {

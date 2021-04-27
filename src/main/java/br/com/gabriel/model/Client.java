@@ -20,33 +20,32 @@ public class Client {
         this.cnpj = cnpj;
         this.shippingCompany = shippingCompany;
     }
-
-    public void newContact(String name, String telephone, String email, String sector, String celphone) {
-        Contact contact = new Contact();
-//        TODO Esse codigo deveria ser movido para o controller, pois o controler normalmente se encarrega de fazer todas as validações de uma entrada/saida de dado
-        if (name == null) {
-            name = "***Não cadastrado***";
-        }
-        if (telephone == null) {
-            telephone = "***Não cadastrado***";
-        }
-        if (email == null) {
-            email = "***Não cadastrado***";
-        }
-        if (sector == null) {
-            sector = "***Não cadastrado***";
-        }
-        if (celphone == null) {
-            celphone = "***Não cadastrado***";
-        }
-
-        contact.setName(name);
-        contact.setTelephone(telephone);
-        contact.setEmail(email);
-        contact.setSector(sector);
-        contact.setCellphone(celphone);
-        contacts.add(contact);
+    public String getName() {
+        return name;
     }
+    public String getTelephone() {
+        return telephone;
+    }
+    public String getAddress() {
+        return address;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+    public String getShippingCompany() {
+        return shippingCompany;
+    }
+    public List<Contact> getContacts() {
+        return contacts;
+    }
+
+   public void addNewContact(Contact contact){
+        this.contacts.add(contact);
+
+    }
+
+
 
     public void contactList() {
         for (Contact contact : contacts) {

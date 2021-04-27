@@ -8,9 +8,13 @@ public interface StockService {
 
     void registerProduct(String serialNumber, String model, String price, String importationDate, int quantity);
 
-    void productOut(String item, int removeQuantity);
+    void productOut(int id, int quantity);
 
-    void productIn(String item, int addQuantity);
+    void productIn(int id, int addQuantity);
 
     List<Product> stockList();
+
+    Product findProduct(int id);
+
+    boolean deleteById(int id);
 }

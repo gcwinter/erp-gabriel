@@ -11,13 +11,28 @@ public class ProductRepositoryImpl implements ProductRepository {
     private static final List<Product> STOCK = new ArrayList<>();
 
     @Override
-    public Product save(Product product) {
+    public void save(Product product) {
         STOCK.add(product);
-        return product;
+
     }
 
     @Override
     public List<Product> findAll() {
         return STOCK;
+    }
+
+    @Override
+    public void delete(Product product) {
+
+    }
+
+    @Override
+    public Product findById(int id) {
+        return null;
+    }
+
+    @Override
+    public void updateProduct(Product product) {
+
     }
 }
